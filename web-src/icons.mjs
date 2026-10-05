@@ -18,6 +18,8 @@ export const icons = {
   lash: svg('<path d="M6 26c5-6 11-9 18-9s13 3 18 9"/><path d="M6 26c5 5 11 7 18 7s13-2 18-7"/><circle cx="24" cy="25" r="4"/><path d="M12 19l-3-5M18 16l-2-5M24 15v-5M30 16l2-5M36 19l3-5"/>'),
   brow: svg('<path d="M6 22c6-7 14-10 22-9 6 1 11 4 14 9"/><path d="M10 21l2-3M15 18l2-3M20 16l2-3M26 15l1-3M32 16l1-3M37 18l1-3"/><path d="M14 32c3-2 6-3 10-3s7 1 10 3"/><circle cx="24" cy="33" r="2.5"/>'),
   hair: svg('<path d="M10 30c0-12 6-22 14-22s14 10 14 22"/><path d="M10 30c3 6 8 10 14 10s11-4 14-10"/><path d="M17 12c-1 6 0 12 4 18M24 8v22M31 12c1 6 0 12-4 18"/>'),
+  laser: svg('<path d="M30 6l-8 14h8l-8 14"/><path d="M14 40h20"/><path d="M10 33c3-2 6-2 9 0s6 2 9 0 6-2 9 0"/><circle cx="36" cy="10" r="2"/>'),
+  signature: '<svg viewBox="0 0 160 50" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path pathLength="1" d="M6 34c8-20 14-26 16-20s-6 22-2 22 10-24 16-24-4 20 2 20 8-16 14-16-2 14 4 14 10-18 18-18c6 0-4 18 2 18s12-10 20-10 6 8 14 8 14-12 22-12 6 6 14 4"/></svg>',
   leaf: svg('<path d="M10 38C10 20 22 10 40 8c-2 18-12 30-30 30z"/><path d="M10 38L28 20"/>'),
   heart: svg('<path d="M24 40S7 30 7 18a9 9 0 0 1 17-4 9 9 0 0 1 17 4c0 12-17 22-17 22z"/>'),
   users: svg('<circle cx="18" cy="16" r="6"/><path d="M6 40c0-7 5-12 12-12s12 5 12 12"/><circle cx="34" cy="18" r="5"/><path d="M32 28c6 0 10 4 10 10"/>'),

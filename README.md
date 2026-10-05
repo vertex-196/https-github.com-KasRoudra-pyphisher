@@ -1,81 +1,88 @@
-# NOVA Centro de Bienestar — nueva web (novamostoles.com)
+# NOVA Centro de Bienestar — web v2 «Respira» (novamostoles.com)
 
-Rediseño completo de la web de NOVA Centro de Bienestar en Móstoles, orientado a **SEO local**:
-una página optimizada por cada servicio, datos estructurados, sitemap y redirecciones 301 desde las URLs antiguas.
-El vídeo de cabecera, la imagen para redes (Open Graph) y un reel vertical se generan con **Remotion**.
+Web nueva de NOVA Centro de Bienestar (Móstoles) con un lenguaje de movimiento inspirado en el yoga:
+todo se mueve al ritmo de una respiración lenta. Está construida con todo el contenido de la web antigua
+(servicios, precios, horario, contacto, taller) y pensada para **posicionar en Google a nivel local**.
 
 ## Estructura
 
 ```
 web/            ← la web lista para subir al hosting (HTML estático)
-web-src/        ← generador: contenido (data.mjs), plantillas (build.mjs), estilos y JS
+web-src/        ← generador: contenido (data.mjs), plantillas (build.mjs), estilos, JS y figura de yoga
+  media/        ← AQUÍ van el logo, las fotos reales (ver media/LEEME.md)
+  resenas.json  ← (opcional) reseñas reales de Google
 remotion/       ← vídeos e imágenes de marca hechos con Remotion
-redes/          ← reel vertical 1080×1920 para Instagram / TikTok
+redes/          ← reels verticales 1080×1920 para Instagram / TikTok
 ```
 
-### Mapa de la web
+## Movimiento e interacción
 
-| URL | Palabra clave principal |
+| Efecto | Dónde |
 |---|---|
-| `/` | centro de bienestar Móstoles |
-| `/clases/` | clases pilates yoga Móstoles |
-| `/clases/pilates-mostoles/` | pilates Móstoles |
-| `/clases/yoga-mostoles/` | yoga Móstoles |
-| `/clases/hipopresivos-mostoles/` | hipopresivos Móstoles |
-| `/clases/entrenamiento-funcional-mostoles/` | entrenamiento funcional Móstoles |
-| `/clases/taichi-mostoles/` | taichí Móstoles |
-| `/clases/clases-online/` | clases pilates yoga online |
-| `/terapias/` | masajes y terapias Móstoles |
-| `/terapias/drenaje-linfatico-mostoles/` | drenaje linfático Móstoles |
-| `/terapias/maderoterapia-mostoles/` | maderoterapia Móstoles |
-| `/terapias/masajes-mostoles/` | masajes Móstoles |
-| `/terapias/osteopatia-mostoles/` | osteopatía Móstoles |
-| `/terapias/reflexologia-mostoles/` | reflexología Móstoles |
-| `/terapias/terapia-craneosacral-mostoles/` | terapia craneosacral Móstoles |
-| `/estetica/` | estética Móstoles |
-| `/estetica/lifting-pestanas-mostoles/` | lifting de pestañas Móstoles |
-| `/estetica/microblading-mostoles/` | microblading Móstoles |
-| `/estetica/spa-capilar-mostoles/` | spa capilar Móstoles |
-| `/talleres/`, `/sobre-nosotros/`, `/contacto/` | marca y conversión |
+| **Saludo al Sol** que se mueve con el scroll: una figura recorre las 8 posturas (con transiciones reales: paso atrás, caminar hacia las manos) mientras sale el sol y se indica *Inhala/Exhala* | Portada |
+| **Respiración guiada interactiva**: 3 ritmos (Calma 4-7-8, Cuadrada, Coherente) con círculo que crece y anillo de progreso | Portada |
+| Orbe que **respira** (4 s inhala / 6 s exhala), sigue al ratón y tiene servicios orbitando a su alrededor | Portada |
+| Polen flotante en canvas que se aparta del cursor | Portada |
+| Servicios en **scroll horizontal anclado** (en móvil, deslizar con el dedo) | Portada |
+| Marquesina de disciplinas que se acelera con la velocidad del scroll | Portada |
+| Manifiesto cuyas palabras se iluminan al leer | Portada |
+| Scroll suave (Lenis), cursor que acompaña, botones magnéticos, tarjetas con relieve 3D | Toda la web |
+| Títulos que suben palabra a palabra, iconos que se dibujan, fotos que se revelan en arco con parallax | Toda la web |
+| Línea de tiempo que se rellena al leer, cifras que cuentan, FAQ con apertura suave | Fichas de servicio |
+| Transiciones suaves entre páginas (View Transitions API) y menú móvil que se abre en círculo | Toda la web |
 
-## Qué incluye para SEO
+Todo se desactiva si el sistema tiene activado **«reducir movimiento»**: el contenido se ve completo y
+el Saludo al Sol aparece como lista de posturas.
 
-- Un `<title>` y una meta description únicos por página (≤ 65 y ≤ 160 caracteres), con «Móstoles».
-- Un único H1 por página, jerarquía H2/H3 limpia y migas de pan.
-- Schema.org en JSON-LD: `HealthAndBeautyBusiness` (NAP, horario, zona, catálogo de servicios), `Service`,
-  `FAQPage`, `BreadcrumbList`, `WebSite`, `CollectionPage`.
-- `sitemap.xml`, `robots.txt` y URL canónica en cada página.
-- `.htaccess` (Apache) y `_redirects` (Netlify/Cloudflare): todo a `https://novamostoles.com` sin www
-  y 301 de las páginas antiguas (`circuito.html`, `lifting.html`, `capilar.html`…) a las nuevas.
-- Enlazado interno: menú desplegable, servicios relacionados y pie con todos los servicios.
-- Rendimiento: HTML estático, fuentes autoalojadas, vídeo de cabecera cargado después del contenido
-  (360 KB), mapa de Google solo bajo demanda. Lighthouse móvil: Rendimiento 98–99, Accesibilidad 100,
-  Buenas prácticas 100, SEO 100.
-- Conversión: botón de WhatsApp en todas las páginas, barra fija en móvil y formulario que prepara
-  el mensaje de WhatsApp (sin servidor ni base de datos).
+La figura de yoga está en `web-src/poses.mjs` (esqueleto con ángulos por postura). La usan tanto la web
+como el vídeo de Remotion, así que son idénticas.
+
+## Contenido recuperado de la web antigua
+
+- Servicios: Pilates, Yoga, Hipopresivos, Circuito Funcional, Taichí, sesiones online, drenaje linfático,
+  maderoterapia, masajes, osteopatía, reflexología, sacro-craneal, lifting de pestañas, microblading,
+  spa capilar y **láser diodo** (nuevo en esta versión, con su tabla de precios por zona).
+- Precios: Circuito Funcional 45/60/75 €/mes · online 25 €/mes (L y X, 17:00) · lifting 30 € ·
+  spa capilar desde 45 € · láser diodo desde 10 €.
+- Contacto: Paseo de Goya 26 (posterior), 28932 Móstoles · 645 265 946 · hola@novamostoles.com ·
+  L–V 9:30–21:30 con cita previa.
+- Taller «La Capa Transparente – Fiestas Optimistas» con El Optimista Provocador.
+- Redirecciones 301 de las URLs antiguas (`circuito.html`, `online.html`, `laser.html`, `lifting.html`…).
+
+## SEO
+
+- Una página por servicio con «Móstoles» en URL, título, H1 y descripción.
+- Schema.org: `HealthAndBeautyBusiness`, `Service` (con `offers` cuando hay precio), `FAQPage`,
+  `BreadcrumbList`, `CollectionPage`, `WebSite`.
+- `sitemap.xml`, `robots.txt`, canonical, `.htaccess` (Apache) y `_redirects` (Netlify/Cloudflare).
+- Todo el texto está en el HTML (los efectos solo lo animan), así que Google lo lee completo.
+- Lighthouse móvil: Rendimiento 94–97 · Accesibilidad 100 · Buenas prácticas 100 · SEO 100.
+
+## Logo, fotos y reseñas
+
+Deja los archivos en `web-src/media/` (instrucciones en `web-src/media/LEEME.md`) y las reseñas reales
+de Google en `web-src/resenas.json`, y ejecuta `node web-src/build.mjs`. La web los incorpora sola:
+logo en cabecera, pie y favicon; foto principal dentro del orbe; foto de Beatriz; foto por servicio;
+galería del centro; carrusel de reseñas con la nota media. Las fotos se convierten a WebP.
+
+Las reseñas nunca se inventan: si no hay archivo, se muestra una invitación a dejar reseña en Google.
 
 ## Comandos
 
 ```bash
-# Regenerar la web después de cambiar textos en web-src/data.mjs
-node web-src/build.mjs
+node web-src/build.mjs                     # regenerar la web
+python3 -m http.server -d web 8000         # probarla en http://localhost:8000
 
-# Vídeos e imágenes de Remotion
 cd remotion && npm install
-npm run studio          # editor visual en el navegador
-npm run render          # genera web/assets/media/* y redes/reel-nova-mostoles.mp4
+npm run studio                             # editor visual de los vídeos
+npm run render                             # imagen OG + reels de redes
 ```
-
-Para probarla en local: `python3 -m http.server -d web 8000` y abrir http://localhost:8000.
 
 ## Pendiente de completar con el centro
 
-1. **Fotos reales** del centro, las clases y de Beatriz (ahora hay ilustraciones). Es lo que más mejora la conversión.
-2. **Logotipo real** y colores de marca, si los hay: la paleta está en `:root` de `web-src/styles.css` y en `remotion/src/theme.ts`.
-3. **Formación y titulaciones** de Beatriz en `/sobre-nosotros/` (señal E-E-A-T importante en temas de salud).
-4. **Precios, bonos y horario de cada clase**.
-5. **Datos legales** (NIF y email) en aviso legal y privacidad: buscar `[completar]`.
-6. Enlaces a **Instagram/Facebook** en `site` de `web-src/data.mjs` (se añaden solos al schema `sameAs`).
-7. Confirmar que el **645 265 946 tiene WhatsApp**.
-8. Revisar las URLs antiguas reales en `legacyRedirects` (`data.mjs`): las marcadas con `*` se han visto indexadas en Google.
-9. Tras publicar: dar de alta `sitemap.xml` en Google Search Console y actualizar la web en la ficha de Google Business Profile.
+1. Logo, fotos reales y reseñas de Google (ver arriba).
+2. Formación y titulaciones de Beatriz en `/sobre-nosotros/` (señal de confianza para Google).
+3. Precios de Pilates, Yoga, Hipopresivos, Taichí, masajes y terapias (la web antigua no los mostraba).
+4. NIF del titular en aviso legal y privacidad (buscar `[completar]`).
+5. Enlaces a Instagram y Facebook en `site` de `web-src/data.mjs`.
+6. Tras publicar: enviar `sitemap.xml` en Google Search Console y enlazar la web desde Google Business Profile.

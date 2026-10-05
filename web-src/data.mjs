@@ -8,6 +8,8 @@ export const site = {
   owner: 'Beatriz Manzanero',
   phone: '+34 645 265 946',
   phoneHref: 'tel:+34645265946',
+  email: 'hola@novamostoles.com',
+  tagline: 'Clases y terapias para ayudarte a restablecer la armonía entre cuerpo y mente.',
   whatsapp: 'https://wa.me/34645265946',
   street: 'Paseo de Goya 26 (posterior)',
   postalCode: '28932',
@@ -209,6 +211,7 @@ export const services = [
       ['Vuelta a la calma', 'Movilidad y estiramientos para recuperar.'],
     ],
     details: [['Duración', '50 minutos'], ['Formato', 'Grupo reducido'], ['Intensidad', 'Adaptable']],
+    prices: [['2 días por semana', '45 €/mes'], ['3 días por semana', '60 €/mes'], ['4 días por semana', '75 €/mes']],
     faqs: [
       ['¿Es muy intenso?', 'La intensidad la marcas tú. El entrenador adapta cargas, tiempos y ejercicios a cada persona.'],
       ['¿Puedo combinarlo con Pilates?', 'Es una combinación excelente: el funcional aporta fuerza y cardio, y el Pilates control y movilidad.'],
@@ -260,15 +263,15 @@ export const services = [
     title: 'Clases de Pilates y Yoga Online en directo | NOVA Móstoles',
     description: 'Sesiones online de Pilates, Yoga e Hipopresivos con NOVA Centro de Bienestar. Entrena y relájate desde casa con la misma atención que en el centro.',
     h1: 'Sesiones online de Pilates y Yoga',
-    lead: 'Entrena y relájate desde casa con la misma atención y cercanía que en el centro.',
+    lead: 'Entrena y relájate desde casa los lunes y miércoles a las 17:00, con la misma atención que en el centro.',
     intro: [
       'Si no puedes venir al centro, la clase va a ti. Nuestras sesiones online están pensadas para mejorar tu bienestar físico y mental estés donde estés.',
-      'Puedes hacerlas en directo, con correcciones en tiempo real, o como sesiones individuales adaptadas a tus objetivos.',
+      'Las clases son en directo los lunes y miércoles a las 17:00, con correcciones en tiempo real. Modalidades: Yoga, Pilates, Circuito Funcional, Taichí e Hipopresivos. Si vives lejos, es la forma perfecta de entrenar con nosotros.',
     ],
     benefits: [
       'Sin desplazamientos: entrena desde casa o de viaje',
       'Correcciones en directo',
-      'Horarios flexibles',
+      'Yoga, Pilates, Circuito, Taichí e Hipopresivos',
       'Solo necesitas una esterilla y algo de espacio',
     ],
     forWho: [
@@ -281,7 +284,8 @@ export const services = [
       ['Conexión', 'Conéctate desde el móvil, la tablet o el ordenador.'],
       ['Clase', 'Sesión guiada con correcciones en tiempo real.'],
     ],
-    details: [['Duración', '45–60 minutos'], ['Formato', 'Grupal o individual'], ['Plataforma', 'Videollamada']],
+    details: [['Horario', 'Lunes y miércoles, 17:00'], ['Formato', 'En directo'], ['Plataforma', 'Videollamada']],
+    prices: [['2 días por semana (L y X)', '25 €/mes']],
     faqs: [
       ['¿Qué necesito para las clases online?', 'Una esterilla, ropa cómoda, conexión a internet y un dispositivo con cámara.'],
       ['¿Puedo combinar clases presenciales y online?', 'Sí, muchos alumnos lo hacen para no perder la constancia.'],
@@ -527,7 +531,7 @@ export const services = [
     lead: 'Eleva, riza y define tus pestañas naturales durante semanas, sin extensiones ni rizador.',
     intro: [
       'El lifting de pestañas es un tratamiento profesional que eleva y curva las pestañas desde la raíz utilizando moldes de silicona y productos específicos. El resultado es una mirada más abierta y despierta de forma natural.',
-      'Podemos completarlo con tinte para que las pestañas se vean más oscuras y definidas, incluso sin máscara.',
+      'Es un procedimiento no invasivo, nutritivo y personalizado, ideal si quieres realzar tu mirada sin extensiones ni químicos agresivos. Podemos completarlo con tinte para que las pestañas se vean más oscuras y definidas.',
     ],
     benefits: [
       'Mirada más abierta y luminosa',
@@ -547,7 +551,8 @@ export const services = [
       ['Lifting y fijado', 'Aplicamos los productos por fases.'],
       ['Tinte y nutrición', 'Opcional: tinte y sérum nutritivo.'],
     ],
-    details: [['Duración', '45–60 minutos'], ['Resultado', '6–8 semanas'], ['Opciones', 'Con o sin tinte']],
+    details: [['Duración', '45–60 minutos'], ['Resultado', '6–8 semanas'], ['Precio', '30 €']],
+    prices: [['Lifting de pestañas', '30 €']],
     faqs: [
       ['¿Cuánto dura el lifting de pestañas?', 'Entre 6 y 8 semanas, lo que tarda en renovarse el ciclo natural de la pestaña.'],
       ['¿Puedo mojarme las pestañas después?', 'Conviene evitar agua, vapor y maquillaje en las 24 horas posteriores.'],
@@ -604,12 +609,13 @@ export const services = [
     lead: 'Una experiencia que combina el cuidado del cuero cabelludo con un masaje profundamente relajante.',
     intro: [
       'El spa capilar, también conocido como head spa, es un ritual que cuida la salud del cuero cabelludo —la base de un cabello bonito— mientras te regala un momento de desconexión total.',
-      'Incluye análisis, limpieza profunda, exfoliación, tratamiento específico según tus necesidades y un masaje craneal y cervical con agua templada.',
+      'Combina ciencia, estética y relajación: hidratación profunda, nutrición intensiva y tratamientos anticaída con productos de última generación, junto a un masaje craneal y cervical que te devuelve la calma.',
     ],
     benefits: [
       'Limpieza profunda del cuero cabelludo',
       'Cabello más brillante y ligero',
-      'Ayuda con caspa, grasa o sequedad',
+      'Hidratación profunda y nutrición intensiva',
+      'Tratamientos anticaída con productos de última generación',
       'Masaje craneal muy relajante',
       'Alivio de la tensión cervical',
     ],
@@ -624,12 +630,58 @@ export const services = [
       ['Tratamiento', 'Mascarilla y activos según tu necesidad.'],
       ['Masaje', 'Masaje craneal y cervical con agua templada.'],
     ],
-    details: [['Duración', '60–75 minutos'], ['Formato', 'Sesión individual'], ['Regalo', 'Pregunta por tarjetas regalo']],
+    details: [['Duración', '60–75 minutos'], ['Formato', 'Sesión individual'], ['Precio', 'Desde 45 €']],
+    prices: [['Spa capilar', 'desde 45 €']],
     faqs: [
       ['¿Cada cuánto se recomienda un spa capilar?', 'Una vez al mes es ideal para mantener el cuero cabelludo sano; en casos concretos se puede hacer un ciclo más seguido.'],
       ['¿Sirve para la caída del cabello?', 'Un cuero cabelludo sano favorece un cabello más fuerte, pero ante caída importante conviene consultar con un dermatólogo.'],
     ],
     related: ['masajes-mostoles', 'lifting-pestanas-mostoles', 'terapia-craneosacral-mostoles'],
+  },
+  {
+    slug: 'depilacion-laser-mostoles',
+    cat: 'estetica',
+    icon: 'laser',
+    name: 'Láser diodo',
+    title: 'Depilación Láser Diodo en Móstoles | Precios por zona | NOVA',
+    description: 'Depilación con láser diodo en Móstoles: segura, eficaz y duradera. Zonas pequeñas desde 10 €, piernas completas 59 €. Pide cita en NOVA.',
+    h1: 'Depilación láser diodo en Móstoles',
+    lead: 'Un tratamiento seguro y eficaz que actúa sobre el folículo piloso para reducir el vello de forma duradera.',
+    intro: [
+      'El láser diodo es un tratamiento de depilación seguro y eficaz que actúa sobre el folículo piloso, proporcionando resultados duraderos y reduciendo el crecimiento del vello en diferentes zonas del cuerpo.',
+      'En NOVA contamos con SProfessional Beauty para realizar el tratamiento, garantizando comodidad, seguridad y resultados visibles desde las primeras sesiones.',
+    ],
+    benefits: [
+      'Reducción duradera del vello',
+      'Resultados visibles desde las primeras sesiones',
+      'Tratamiento cómodo y seguro',
+      'Menos irritación que el rasurado',
+      'Precios claros por zona',
+    ],
+    forWho: [
+      'Quien quiere olvidarse de la cuchilla y la cera',
+      'Personas con irritación por el rasurado',
+      'Hombres y mujeres, en cualquier zona del cuerpo',
+    ],
+    steps: [
+      ['Valoración', 'Revisamos tu tipo de piel y de vello y resolvemos dudas.'],
+      ['Preparación', 'La zona debe venir rasurada y sin exposición solar reciente.'],
+      ['Sesión', 'Aplicamos el láser por zonas, de forma cómoda y segura.'],
+      ['Seguimiento', 'Programamos las siguientes sesiones según el ciclo del vello.'],
+    ],
+    details: [['Tecnología', 'Láser diodo'], ['Zonas', 'Todo el cuerpo'], ['Precio', 'Desde 10 €']],
+    prices: [
+      ['Zonas pequeñas', '10 €'], ['Axilas o ingles', '20 €'], ['Ingles completas', '30 €'],
+      ['Axilas e ingles completas', '45 €'], ['Medias piernas', '40 €'], ['Piernas completas', '59 €'],
+      ['Axilas, ingles y piernas completas', '99 €'], ['Hombros', '20 €'], ['Pecho y abdomen', '40 €'],
+      ['Espalda', '40 €'], ['Glúteos', '30 €'], ['Brazos', '40 €'],
+    ],
+    faqs: [
+      ['¿Cuántas sesiones de láser diodo necesito?', 'Depende de la zona, el tipo de vello y la piel. Se notan resultados desde las primeras sesiones y se completa un ciclo de varias sesiones espaciadas.'],
+      ['¿Duele la depilación láser diodo?', 'La mayoría de personas siente solo un ligero calor o pinchazo. Te explicamos todo antes de empezar.'],
+      ['¿Cómo debo preparar la zona?', 'Ven con la zona rasurada el día anterior, sin cremas y evitando el sol en los días previos.'],
+    ],
+    related: ['lifting-pestanas-mostoles', 'microblading-mostoles', 'spa-capilar-mostoles'],
   },
 ];
 
@@ -654,6 +706,7 @@ export const legacyRedirects = {
   '/reflexologia.html': '/terapias/reflexologia-mostoles/',
   '/sacrocraneal.html': '/terapias/terapia-craneosacral-mostoles/',
   '/microblading.html': '/estetica/microblading-mostoles/',
+  '/laser.html': '/estetica/depilacion-laser-mostoles/', // *
   '/contacto.html': '/contacto/',
 };
 
