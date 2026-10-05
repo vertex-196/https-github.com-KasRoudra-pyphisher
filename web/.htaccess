@@ -1,0 +1,48 @@
+# NOVA — Apache
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# 1) Una sola versión del dominio: https y sin www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://novamostoles.com/$1 [R=301,L]
+</IfModule>
+
+# 2) URLs antiguas → nuevas (conserva el posicionamiento ya ganado)
+Redirect 301 /index.html /
+Redirect 301 /circuito.html /clases/entrenamiento-funcional-mostoles/
+Redirect 301 /online.html /clases/clases-online/
+Redirect 301 /talleres.html /talleres/
+Redirect 301 /lifting.html /estetica/lifting-pestanas-mostoles/
+Redirect 301 /capilar.html /estetica/spa-capilar-mostoles/
+Redirect 301 /aviso.html /aviso-legal/
+Redirect 301 /pilates.html /clases/pilates-mostoles/
+Redirect 301 /yoga.html /clases/yoga-mostoles/
+Redirect 301 /hipopresivos.html /clases/hipopresivos-mostoles/
+Redirect 301 /taichi.html /clases/taichi-mostoles/
+Redirect 301 /drenaje.html /terapias/drenaje-linfatico-mostoles/
+Redirect 301 /maderoterapia.html /terapias/maderoterapia-mostoles/
+Redirect 301 /masajes.html /terapias/masajes-mostoles/
+Redirect 301 /osteopatia.html /terapias/osteopatia-mostoles/
+Redirect 301 /reflexologia.html /terapias/reflexologia-mostoles/
+Redirect 301 /sacrocraneal.html /terapias/terapia-craneosacral-mostoles/
+Redirect 301 /microblading.html /estetica/microblading-mostoles/
+Redirect 301 /contacto.html /contacto/
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000"
+  <FilesMatch "\.(woff2|mp4|webm|jpg|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
+</IfModule>
